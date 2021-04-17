@@ -19,7 +19,15 @@ public class Level : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.R))
         {
             player.transform.SetPositionAndRotation(resetPos, player.transform.localRotation);
-            stopwatch.resetStopwatch();
+            //stopwatch.resetStopwatch();
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Player"))
+        {
+            print("Win welplé");
         }
     }
 }
