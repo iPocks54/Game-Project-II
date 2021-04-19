@@ -29,6 +29,7 @@ public class Dash : MonoBehaviour
 
     private void Dashing()
     {
+       // rig.MovePosition(rig.position + new Vector3(-4,0,0));
         rig.AddForce(transform.forward * dashSpeed, ForceMode.Force);
         isDashing = false;
 
