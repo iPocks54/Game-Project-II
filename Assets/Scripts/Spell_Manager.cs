@@ -11,9 +11,9 @@ public class Spell_Manager : MonoBehaviour
     void Start()
     {
         timers[0] = new CooldownTimer(spells[0].cooldown);
-        timers[1] = new CooldownTimer(spells[0].cooldown);
-        timers[2] = new CooldownTimer(spells[0].cooldown);
-        timers[3] = new CooldownTimer(spells[0].cooldown);
+        timers[1] = new CooldownTimer(spells[1].cooldown);
+        timers[2] = new CooldownTimer(spells[2].cooldown);
+        timers[3] = new CooldownTimer(spells[3].cooldown);
 
         timers[0].TimeRemaining = 0;
         timers[1].TimeRemaining = 0;
@@ -30,13 +30,13 @@ public class Spell_Manager : MonoBehaviour
     void Inputs()
     {
         if (Input.GetKeyDown(KeyCode.Alpha1))
-            SpellPressed(0);
+            SpellPressed(0, KeyCode.Alpha1);
         if (Input.GetKeyDown(KeyCode.Alpha2))
-            SpellPressed(1);
+            SpellPressed(1, KeyCode.Alpha2);
         if (Input.GetKeyDown(KeyCode.Alpha3))
-            SpellPressed(2);
+            SpellPressed(2, KeyCode.Alpha3);
         if (Input.GetKeyDown(KeyCode.Alpha4))
-            SpellPressed(3);
+            SpellPressed(3, KeyCode.Alpha4);
     }
 
     void UpdateCDs()
@@ -51,12 +51,12 @@ public class Spell_Manager : MonoBehaviour
 
     }
 
-    void SpellPressed(int n)
+    void SpellPressed(int n, KeyCode keyPressed)
     {
         if (!timers[n].IsActive)
         {
             timers[n].Start();
-            spells[n].Cast();
+            spells[n].Cast(keyPressed);
         }
     }
 }

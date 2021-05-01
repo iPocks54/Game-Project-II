@@ -15,7 +15,7 @@ public class Spell : MonoBehaviour
 
     }
 
-    public virtual void Cast()
+    public virtual void Cast(KeyCode keyPressed)
     {
 
     }

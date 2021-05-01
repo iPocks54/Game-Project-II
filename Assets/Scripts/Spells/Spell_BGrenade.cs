@@ -15,9 +15,9 @@ public class Spell_BGrenade : Spell
     {
     }
 
-    public override void Cast()
+    public override void Cast(KeyCode keyPressed)
     {
-        base.Cast();
+        base.Cast(keyPressed);
         throwing_position = GameObject.FindGameObjectWithTag("CastPosition");
         GameObject nGrenade = Instantiate(grenade, throwing_position.transform.position, Quaternion.identity);
         Destroy(nGrenade, 15);      
