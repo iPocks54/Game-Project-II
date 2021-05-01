@@ -10,22 +10,6 @@ public class Spell_Platform : Spell
     private GameObject currentGrenade;
     private KeyCode keyRepressed;
 
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.T))
-            print(" lala : " + keyRepressed);
-        if (Input.GetKeyDown(keyRepressed))
-        {
-                Destroy(currentGrenade);
-        }
-    }
-
     public override void Cast(KeyCode keyPressed)
     {
         keyRepressed = keyPressed;

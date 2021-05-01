@@ -15,7 +15,6 @@ public class PlatformCreate : MonoBehaviour
         cam = GameObject.FindGameObjectWithTag("MainCamera"); ;
         Vector3 pos = new Vector3(cam.transform.forward.x, cam.transform.forward.y + angle, cam.transform.forward.z);
         GetComponent<Rigidbody>().AddForce(cam.transform.forward * force);
-        print("lol : " + cam.transform.forward);
     }
 
     private void Update()
