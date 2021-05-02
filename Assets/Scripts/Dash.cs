@@ -2,39 +2,26 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Dash : MonoBehaviour
+public class Dash : Spell
 {
     public float dashSpeed = 400;
+    private GameObject player;
     Rigidbody rig;
-    bool isDashing;
 
-    //public GameObject dashEffect;
-
-    void Start()
+    void Awake()
     {
-        rig = GetComponent<Rigidbody>();
+        player = GameObject.FindGameObjectWithTag("Player");
     }
 
-    void Update()
+    private void Initialize()
     {
-        if (Input.GetKeyDown(KeyCode.E))
-            isDashing = true;
+        player = GameObject.FindGameObjectWithTag("Player");
     }
 
-    private void FixedUpdate()
+    public override void Cast(KeyCode keyPressed)
     {
-        if (isDashing)
-            Dashing();
-    }
-
-    private void Dashing()
-    {
-       // rig.MovePosition(rig.position + new Vector3(-4,0,0));
-        rig.AddForce(transform.forward * dashSpeed, ForceMode.Force);
-        isDashing = false;
-
-        /*GameObject effect = Instantiate(dashEffect, Camera.main.transform.position, dashEffect.transform.rotation);
-        effect.transform.parent = Camera.main.transform;
-        effect.transform.LookAt(transform);*/
+        if (!player)
+            Initialize();
+        player.GetComponent<Rigidbody>().AddForce(player.transform.forward * dashSpeed, ForceMode.Force);
     }
 }
