@@ -1169,6 +1169,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1950372054027105731, guid: 845b2505e2b8add4e97849d062230f27, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1950372054027105731, guid: 845b2505e2b8add4e97849d062230f27, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 1952770686059802219, guid: 845b2505e2b8add4e97849d062230f27, type: 3}
       propertyPath: m_Name
       value: First person controller full
@@ -1282,7 +1290,6 @@ GameObject:
   - component: {fileID: 1675672573}
   - component: {fileID: 1675672572}
   - component: {fileID: 1675672571}
-  - component: {fileID: 1675672574}
   m_Layer: 0
   m_Name: Cube (10)
   m_TagString: Untagged
@@ -1366,25 +1373,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1675672569}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!95 &1675672574
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1675672569}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: ca5f2f1c1b773eb4980b875a9b03e778, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1732052021
 GameObject:
   m_ObjectHideFlags: 0
@@ -1397,7 +1385,6 @@ GameObject:
   - component: {fileID: 1732052025}
   - component: {fileID: 1732052024}
   - component: {fileID: 1732052023}
-  - component: {fileID: 1732052026}
   m_Layer: 0
   m_Name: Cube (11)
   m_TagString: Untagged
@@ -1481,22 +1468,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1732052021}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &1732052026
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1732052021}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 200d81c8e63907948b2f346ca9c540eb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  xmove: 0.07
-  ymove: 0
-  zmove: 0
-  movingTime: 1
 --- !u!1 &1809149093
 GameObject:
   m_ObjectHideFlags: 0
@@ -1699,7 +1670,6 @@ GameObject:
   - component: {fileID: 2002321491}
   - component: {fileID: 2002321490}
   - component: {fileID: 2002321489}
-  - component: {fileID: 2002321492}
   m_Layer: 0
   m_Name: Cube (6)
   m_TagString: Untagged
@@ -1783,22 +1753,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2002321487}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &2002321492
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2002321487}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 200d81c8e63907948b2f346ca9c540eb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  xmove: 0
-  ymove: 0
-  zmove: 0.06
-  movingTime: 1
 --- !u!1 &2027966434
 GameObject:
   m_ObjectHideFlags: 0
@@ -1811,7 +1765,6 @@ GameObject:
   - component: {fileID: 2027966439}
   - component: {fileID: 2027966438}
   - component: {fileID: 2027966437}
-  - component: {fileID: 2027966436}
   m_Layer: 0
   m_Name: Cube (13)
   m_TagString: Untagged
@@ -1833,22 +1786,6 @@ Transform:
   m_Father: {fileID: 105174977}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2027966436
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2027966434}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 200d81c8e63907948b2f346ca9c540eb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  xmove: 0.07
-  ymove: 0
-  zmove: 0
-  movingTime: 1
 --- !u!65 &2027966437
 BoxCollider:
   m_ObjectHideFlags: 0

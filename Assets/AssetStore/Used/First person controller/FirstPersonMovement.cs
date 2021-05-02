@@ -1,4 +1,8 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+using System;
 
 public class FirstPersonMovement : MonoBehaviour
 {
@@ -11,11 +15,5 @@ public class FirstPersonMovement : MonoBehaviour
         velocity.y = Input.GetAxis("Vertical") * speed * Time.deltaTime;
         velocity.x = Input.GetAxis("Horizontal") * speed * Time.deltaTime;
         transform.Translate(velocity.x, 0, velocity.y);
-
-        /*if (Input.GetKeyDown(KeyCode.E))
-        {
-            transform.Translate(0, 0, 4);
-            print("TP TP OOOOOM");
-        }*/
     }
 }
