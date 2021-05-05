@@ -6,6 +6,7 @@ public class Spell_BGrenade : Spell
 {
     public GameObject grenade;
     GameObject throwing_position;
+
     void Start()
     {
         grenade.GetComponent<Rigidbody>();
