@@ -43,5 +43,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2fced951990986e46ae311cd57364264, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cooldown: 2
+  cooldown: 0.01
   grenade: {fileID: 2060781450780785060, guid: ca3866d58d515ad4398e376ffe7a6b35, type: 3}
