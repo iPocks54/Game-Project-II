@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlatformCreate : MonoBehaviour
 {
-    public float force = 100f;
+    public float force = 200f;
     GameObject cam;
     public float angle = 1f;
     public GameObject platform;
@@ -32,7 +32,8 @@ public class PlatformCreate : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        Destroy(gameObject);
+        if (!collision.gameObject.CompareTag("Player"))
+            Destroy(gameObject);
     }
 
     private void OnDestroy()

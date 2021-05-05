@@ -15,7 +15,7 @@ public class Stopwatch : MonoBehaviour
         timeText.text = timeStart.ToString();
     }
 
-    void Update()
+    void FixedUpdate()
     {
         if (!isPaused)
         {

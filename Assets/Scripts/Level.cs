@@ -6,6 +6,8 @@ public class Level : MonoBehaviour
 {
     public GameObject player;
     public Vector3 resetPos;
+    public KeyCode resetKey = KeyCode.R;
+    public float resetLimit = -100;
     public Stopwatch stopwatch;
     // Start is called before the first frame update
     void Start()
@@ -16,11 +18,16 @@ public class Level : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.R))
+        if (Input.GetKeyDown(resetKey) || player.transform.position.y < resetLimit)
         {
-            player.transform.SetPositionAndRotation(resetPos, player.transform.localRotation);
+            resetPlayer();
             //stopwatch.resetStopwatch();
         }
+    }
+
+    public void resetPlayer()
+    {
+        player.transform.SetPositionAndRotation(resetPos, player.transform.localRotation);
     }
 
     private void OnTriggerEnter(Collider other)
@@ -28,6 +35,7 @@ public class Level : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             print("Win welplé");
+            stopwatch.setPause(true);
         }
     }
 }
