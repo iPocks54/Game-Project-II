@@ -13,12 +13,14 @@ public class FirstPersonMovement : MonoBehaviour
 
     public KeyCode runBind;
 
-    public Camera cam;
+    Camera cam;
     Vector2 velocity;
     float t = 5;
     bool isRunning = false;
     private void Start()
     {
+        cam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
+        cam.fieldOfView = startFOV;
     }
 
     void FixedUpdate()
