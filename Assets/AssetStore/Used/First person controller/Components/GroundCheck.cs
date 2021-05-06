@@ -8,7 +8,17 @@ public class GroundCheck : MonoBehaviour
 
     void LateUpdate()
     {
-        isGrounded = Physics.Raycast(transform.position, Vector3.down, maxGroundDistance);
+      //  isGrounded = Physics.Raycast(transform.position, Vector3.down, maxGroundDistance);
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        isGrounded = true;
+    }
+
+    private void OnCollisionExit(Collision collision)
+    {
+        isGrounded = false;
     }
 
     void OnDrawGizmosSelected()
@@ -21,7 +31,7 @@ public class GroundCheck : MonoBehaviour
     }
 
 
-    public static GroundCheck Create(Transform parent)
+    /*public static GroundCheck Create(Transform parent)
     {
         GameObject newGroundCheck = new GameObject("Ground check");
 #if UNITY_EDITOR
@@ -30,5 +40,5 @@ public class GroundCheck : MonoBehaviour
         newGroundCheck.transform.parent = parent;
         newGroundCheck.transform.localPosition = Vector3.up * .01f;
         return newGroundCheck.AddComponent<GroundCheck>();
-    }
+    }*/
 }

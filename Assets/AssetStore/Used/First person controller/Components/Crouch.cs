@@ -28,8 +28,8 @@ public class Crouch : MonoBehaviour
 
         // Get or create the groundCheck object.
         groundCheck = GetComponentInChildren<GroundCheck>();
-        if (!groundCheck)
-            groundCheck = GroundCheck.Create(transform);
+       // if (!groundCheck)
+         //   groundCheck = GroundCheck.Create(transform);
     }
 
     void Start()

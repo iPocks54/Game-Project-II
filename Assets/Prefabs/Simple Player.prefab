@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7728524696005779423}
   m_Layer: 0
   m_Name: Camera
-  m_TagString: Untagged
+  m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -322,12 +322,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97fca36bd81de7c4cafce7bbf02ca611, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  normalSpeed: 3
-  runSpeed: 5
-  maxFOV: 90
-  startFOV: 80
-  runBind: 0
-  cam: {fileID: 0}
+  normalSpeed: 4
+  runSpeed: 7
+  maxFOV: 100
+  startFOV: 70
+  runBind: 304
 --- !u!114 &7806629617034175333
 MonoBehaviour:
   m_ObjectHideFlags: 0

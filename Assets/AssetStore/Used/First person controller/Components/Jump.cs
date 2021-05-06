@@ -18,8 +18,8 @@ public class Jump : MonoBehaviour
     void Reset()
     {
         groundCheck = GetComponentInChildren<GroundCheck>();
-        if (!groundCheck)
-            groundCheck = GroundCheck.Create(transform);
+       // if (!groundCheck)
+          //  groundCheck = GroundCheck.Create(transform);
     }
 
     void Awake()
