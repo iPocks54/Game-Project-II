@@ -11,6 +11,10 @@ public class Jump : MonoBehaviour
     public float gravity = 10f;
     GameObject cam;
 
+    float fallSpeedModifier = 0;
+    bool isFalling;
+    float fallPos;
+
     void Reset()
     {
         groundCheck = GetComponentInChildren<GroundCheck>();
@@ -22,7 +26,8 @@ public class Jump : MonoBehaviour
     {
         rigidbody = GetComponent<Rigidbody>();
         fpm = GetComponent<FirstPersonMovement>();
-        cam = GameObject.FindGameObjectWithTag("MainCamera"); ;
+        cam = GameObject.FindGameObjectWithTag("MainCamera");
+        fallPos = gameObject.transform.position.y;
     }
 
     void LateUpdate()
@@ -37,6 +42,18 @@ public class Jump : MonoBehaviour
             Jumped?.Invoke();
         }
 
-        rigidbody.velocity = new Vector3(rigidbody.velocity.x, rigidbody.velocity.y - (gravity * Time.deltaTime) ,rigidbody.velocity.z);
+        checkIfFall();
+        rigidbody.velocity = new Vector3(rigidbody.velocity.x, rigidbody.velocity.y - (gravity * Time.deltaTime + fallSpeedModifier) ,rigidbody.velocity.z);
+    }
+    
+    void checkIfFall()
+    {
+        if (gameObject.transform.position.y < fallPos)
+            fallSpeedModifier += 2 * Time.deltaTime;
+        
+        fallPos = gameObject.transform.position.y;
+
+        if (groundCheck.isGrounded)
+            fallSpeedModifier = 0;
     }
 }

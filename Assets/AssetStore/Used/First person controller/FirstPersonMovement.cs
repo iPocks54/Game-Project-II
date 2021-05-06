@@ -36,8 +36,10 @@ public class FirstPersonMovement : MonoBehaviour
     void walk()
     {
         cam.fieldOfView = Mathf.Lerp(cam.fieldOfView, startFOV, t * Time.deltaTime);
-        velocity.y = Input.GetAxis("Vertical") * normalSpeed * Time.deltaTime;
-        velocity.x = Input.GetAxis("Horizontal") * normalSpeed * Time.deltaTime;
+        velocity.y = Input.GetAxis("Vertical");
+        velocity.x = Input.GetAxis("Horizontal");
+
+        velocity = velocity.normalized * normalSpeed * Time.deltaTime;
 
         isRunning = false;
     }
@@ -45,8 +47,10 @@ public class FirstPersonMovement : MonoBehaviour
     void run()
     {
         FOVChanger();
-        velocity.y = Input.GetAxis("Vertical") * runSpeed * Time.deltaTime;
-        velocity.x = Input.GetAxis("Horizontal") * runSpeed * Time.deltaTime;
+        velocity.y = Input.GetAxis("Vertical");
+        velocity.x = Input.GetAxis("Horizontal");
+
+        velocity = velocity.normalized * runSpeed * Time.deltaTime;
 
 
     }
