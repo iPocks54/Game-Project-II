@@ -9,19 +9,12 @@ public class Level : MonoBehaviour
     public KeyCode resetKey = KeyCode.R;
     public float resetLimit = -100;
     public Stopwatch stopwatch;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
     void Update()
     {
         if (Input.GetKeyDown(resetKey) || player.transform.position.y < resetLimit)
         {
             resetPlayer();
-            //stopwatch.resetStopwatch();
         }
     }
 
@@ -30,6 +23,12 @@ public class Level : MonoBehaviour
         player.transform.SetPositionAndRotation(resetPos, player.transform.localRotation);
     }
 
+    public void setResetPos(Vector3 newResetPos)
+    {
+        resetPos = newResetPos;
+    }
+
+    //PLACER LA WIN PEUT ETRE OTRE PAR ENFAIT ^^^^^^ xD sale pute
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Player"))

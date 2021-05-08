@@ -830,6 +830,11 @@ Transform:
   m_Father: {fileID: 146677201}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1119289408 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7736849353421331136, guid: 3d43ba2a76d945646ab1675a674aa5d7, type: 3}
+  m_PrefabInstance: {fileID: 1995295048}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1142248158
 GameObject:
   m_ObjectHideFlags: 0
@@ -1207,6 +1212,63 @@ Transform:
   m_Father: {fileID: 146677201}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1995295048
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 7734493542212567400, guid: 3d43ba2a76d945646ab1675a674aa5d7, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.87
+      objectReference: {fileID: 0}
+    - target: {fileID: 7734493542212567400, guid: 3d43ba2a76d945646ab1675a674aa5d7, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.472
+      objectReference: {fileID: 0}
+    - target: {fileID: 7734493542212567400, guid: 3d43ba2a76d945646ab1675a674aa5d7, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.98
+      objectReference: {fileID: 0}
+    - target: {fileID: 7734493542212567400, guid: 3d43ba2a76d945646ab1675a674aa5d7, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7734493542212567400, guid: 3d43ba2a76d945646ab1675a674aa5d7, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7734493542212567400, guid: 3d43ba2a76d945646ab1675a674aa5d7, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7734493542212567400, guid: 3d43ba2a76d945646ab1675a674aa5d7, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7734493542212567400, guid: 3d43ba2a76d945646ab1675a674aa5d7, type: 3}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7734493542212567400, guid: 3d43ba2a76d945646ab1675a674aa5d7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7734493542212567400, guid: 3d43ba2a76d945646ab1675a674aa5d7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7734493542212567400, guid: 3d43ba2a76d945646ab1675a674aa5d7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7736849353421331136, guid: 3d43ba2a76d945646ab1675a674aa5d7, type: 3}
+      propertyPath: m_Name
+      value: Simple Player (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 3d43ba2a76d945646ab1675a674aa5d7, type: 3}
 --- !u!1 &2039828034
 GameObject:
   m_ObjectHideFlags: 0
@@ -1456,8 +1518,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2eb9fca806be94440ab138676d2a2160, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 2479534227214887149}
+  player: {fileID: 1119289408}
   resetPos: {x: 0, y: 2, z: 0}
+  resetKey: 114
+  resetLimit: -100
   stopwatch: {fileID: 1260136947641872962}
 --- !u!33 &2457290374883334581
 MeshFilter:
@@ -1608,6 +1672,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be77aff92dd427b49a824c41f6e00380, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cooldown: 2
   dashSpeed: 400
 --- !u!65 &2479534227214887148
 BoxCollider:
@@ -1644,7 +1709,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &2479853393292928631
 GameObject:
   m_ObjectHideFlags: 0
@@ -1773,7 +1838,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97fca36bd81de7c4cafce7bbf02ca611, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  normalSpeed: 3
+  runSpeed: 5
+  maxFOV: 90
+  startFOV: 80
+  runBind: 0
 --- !u!114 &2591828842881307195
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1836,6 +1905,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   groundCheck: {fileID: 2592267762872627693}
   jumpStrength: 2
+  gravity: 10
 --- !u!114 &2592453613059152191
 MonoBehaviour:
   m_ObjectHideFlags: 0
