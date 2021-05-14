@@ -34,4 +34,9 @@ public class Stopwatch : MonoBehaviour
     {
         isPaused = ispaused;
     }
+
+    public float getTime()
+    {
+        return timeStart;
+    }
 }

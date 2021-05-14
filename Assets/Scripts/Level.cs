@@ -1,14 +1,24 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class Level : MonoBehaviour
 {
-    public GameObject player;
+    private GameObject player;
     public Vector3 resetPos;
     public KeyCode resetKey = KeyCode.R;
     public float resetLimit = -100;
-    public Stopwatch stopwatch;
+    private Stopwatch stopwatch;
+    private TMP_Text winText;
+
+    private void Start()
+    {
+        player = GameObject.FindGameObjectWithTag("Player");
+        stopwatch = GameObject.FindGameObjectWithTag("Stopwatch").GetComponent<Stopwatch>();
+        winText = GameObject.FindGameObjectWithTag("WinText").GetComponent<TMP_Text>();
+        winText.enabled = false;
+    }
 
     void Update()
     {
@@ -36,8 +46,9 @@ public class Level : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            print("Win welplé");
             stopwatch.setPause(true);
+            winText.text = ("TA GAGN EN " + stopwatch.getTime().ToString() + " SECONDES");
+            winText.enabled = true;
         }
     }
 }
