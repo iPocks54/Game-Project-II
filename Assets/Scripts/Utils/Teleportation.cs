@@ -7,9 +7,13 @@ public class Teleportation : MonoBehaviour
     [SerializeField]
     public Vector3 tpPos;
     [SerializeField]
-    public GameObject player;
-    [SerializeField]
     public bool setCheckpoint;
+    private GameObject player;
+
+    private void Start()
+    {
+        player = GameObject.FindGameObjectWithTag("Player");
+    }
 
     private void OnTriggerEnter(Collider other)
     {

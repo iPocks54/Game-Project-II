@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using System;
+using TMPro;
 
 public class Stopwatch : MonoBehaviour
 {
     public float timeStart = 0;
-    public Text timeText;
+    public TMP_Text timeText;
     public bool isPaused = false;
 
     void Start()

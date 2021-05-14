@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class SetCheckpoint : MonoBehaviour
 {
-    [SerializeField]
-    private Vector3 checkpointPos;
+    //[SerializeField]
+    //private Vector3 checkpointPos;
 
     private void OnTriggerEnter(Collider other)
     {
-        FindObjectOfType<Level>().setResetPos(checkpointPos);
+        FindObjectOfType<Level>().setResetPos(transform.position);
     }
 }
