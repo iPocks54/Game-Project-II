@@ -6,6 +6,7 @@ TagManager:
   tags:
   - CastPosition
   - Collectible
+  - CheckpointText
   layers:
   - Default
   - TransparentFX

@@ -23,9 +23,12 @@ public class Level : MonoBehaviour
         player.transform.SetPositionAndRotation(resetPos, player.transform.localRotation);
     }
 
-    public void setResetPos(Vector3 newResetPos)
+    public bool setResetPos(Vector3 newResetPos)
     {
+        if (newResetPos == resetPos)
+            return false;
         resetPos = newResetPos;
+        return true;
     }
 
     //PLACER LA WIN PEUT ETRE OTRE PAR ENFAIT ^^^^^^ xD sale pute
