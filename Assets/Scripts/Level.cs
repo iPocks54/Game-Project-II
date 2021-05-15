@@ -8,9 +8,11 @@ public class Level : MonoBehaviour
     private GameObject player;
     public Vector3 resetPos;
     public KeyCode resetKey = KeyCode.R;
-    public float resetLimit = -100;
+    public float resetLimit = -50;
     private Stopwatch stopwatch;
     private TMP_Text winText;
+    private float time = 0;
+    public float displayTime = 5;
 
     private void Start()
     {
@@ -25,6 +27,15 @@ public class Level : MonoBehaviour
         if (Input.GetKeyDown(resetKey) || player.transform.position.y < resetLimit)
         {
             resetPlayer();
+        }
+        if (winText.enabled == true)
+        {
+            time += Time.deltaTime;
+            if (time >= displayTime)
+            {
+                time = 0;
+                winText.enabled = false;
+            }
         }
     }
 
@@ -47,7 +58,7 @@ public class Level : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             stopwatch.setPause(true);
-            winText.text = ("TA GAGN EN " + stopwatch.getTime().ToString() + " SECONDES");
+            winText.text = ("T4AS GAGN2 EN " + stopwatch.getTime().ToString() + " SECONDES GG BG :P");
             winText.enabled = true;
         }
     }
