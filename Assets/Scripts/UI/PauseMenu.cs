@@ -7,6 +7,8 @@ public class PauseMenu : MonoBehaviour
     private GameObject player;
     private GameObject cam;
     [SerializeField]
+    private GameObject pauseUI;
+    [SerializeField]
     private KeyCode pauseKey = KeyCode.Escape;
     private bool isPaused = false;
 
@@ -30,6 +32,7 @@ public class PauseMenu : MonoBehaviour
         else
             Time.timeScale = 1;
         //RAJOUTER LES SORTS APRES SUREMENT :)
+        pauseUI.SetActive(isPaused);
         player.GetComponent<FirstPersonMovement>().enabled = !isPaused;
         player.GetComponent<Jump>().enabled = !isPaused;
         cam.GetComponent<FirstPersonLook>().enabled = !isPaused;
