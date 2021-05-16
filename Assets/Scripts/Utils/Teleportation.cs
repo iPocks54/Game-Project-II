@@ -21,7 +21,7 @@ public class Teleportation : MonoBehaviour
         {
             player.transform.position = tpPos;
             if (setCheckpoint)
-                FindObjectOfType<Level>().setResetPos(tpPos);
+                FindObjectOfType<PlayerReset>().setResetPos(tpPos);
         }
     }
 }

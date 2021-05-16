@@ -21,20 +21,30 @@ public class PauseMenu : MonoBehaviour
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
+        {
             TriggerPause();
+            pauseUI.SetActive(isPaused);
+        }
     }
 
-    void TriggerPause()
+    public void TriggerPause()
     {
         isPaused = !isPaused;
         if (isPaused)
+        {
             Time.timeScale = 0;
+            Cursor.lockState = CursorLockMode.None;
+        }
         else
+        {
             Time.timeScale = 1;
+            Cursor.lockState = CursorLockMode.Locked;
+        }
         //RAJOUTER LES SORTS APRES SUREMENT :)
-        pauseUI.SetActive(isPaused);
         player.GetComponent<FirstPersonMovement>().enabled = !isPaused;
         player.GetComponent<Jump>().enabled = !isPaused;
+        player.GetComponent<PlayerReset>().enabled = !isPaused;
         cam.GetComponent<FirstPersonLook>().enabled = !isPaused;
+        Cursor.visible = isPaused;
     }
 }

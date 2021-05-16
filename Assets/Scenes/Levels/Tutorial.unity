@@ -1178,7 +1178,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: WinLine
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3342801309303151640, guid: 5003710bf7a7e7f478cd7052c4faab53, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 5003710bf7a7e7f478cd7052c4faab53, type: 3}
 --- !u!1001 &713252865
 PrefabInstance:
@@ -18138,6 +18139,53 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3d43ba2a76d945646ab1675a674aa5d7, type: 3}
+--- !u!1 &1966940062
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1966940064}
+  - component: {fileID: 1966940063}
+  m_Layer: 0
+  m_Name: LEVELEMANAGER
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1966940063
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1966940062}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2eb9fca806be94440ab138676d2a2160, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  resetPos: {x: 0, y: 2, z: 0}
+  resetKey: 114
+  resetLimit: -50
+  displayTime: 10
+--- !u!4 &1966940064
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1966940062}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -30, y: 0, z: -114.33}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &2035366055 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3802773024297131089, guid: c69958245445919488a392fa56debc43, type: 3}

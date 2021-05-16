@@ -18,7 +18,7 @@ public class SimpleBullet : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Player"))
-            FindObjectOfType<Level>().resetPlayer();
+            FindObjectOfType<PlayerReset>().resetPlayer();
         Destroy(gameObject);
     }
 }

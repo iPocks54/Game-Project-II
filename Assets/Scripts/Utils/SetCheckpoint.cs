@@ -22,7 +22,7 @@ public class SetCheckpoint : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (FindObjectOfType<Level>().setResetPos(transform.position))
+        if (FindObjectOfType<PlayerReset>().setResetPos(transform.position))
         {
             checkText.enabled = true;
             isTrigger = true;

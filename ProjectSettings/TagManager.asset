@@ -9,6 +9,7 @@ TagManager:
   - CheckpointText
   - Stopwatch
   - WinText
+  - WinUI
   layers:
   - Default
   - TransparentFX
