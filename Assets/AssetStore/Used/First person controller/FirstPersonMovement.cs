@@ -62,7 +62,7 @@ public class FirstPersonMovement : MonoBehaviour
             cam.fieldOfView = Mathf.Lerp(cam.fieldOfView, maxFOV, t * Time.deltaTime);
             isRunning = true;
         }
-        else if (Input.GetAxis("Vertical") < 0.8)
+        else if (Input.GetAxis("Vertical") < 0.9)
             cam.fieldOfView = Mathf.Lerp(cam.fieldOfView, startFOV, t * Time.deltaTime * 2);
     }
     public bool getIsRunning()
