@@ -32,7 +32,7 @@ public class PauseMenu : MonoBehaviour
         gameIsPaused = !gameIsPaused;
         if (gameIsPaused)
         {
-            Time.timeScale = 0;
+            //Time.timeScale = 0;
             Cursor.lockState = CursorLockMode.None;
         }
         else

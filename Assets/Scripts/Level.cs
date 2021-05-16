@@ -25,8 +25,8 @@ public class Level : MonoBehaviour
             stopwatch.setPause(true);
             winUI.SetActive(true);
             FindObjectOfType<PauseMenu>().TriggerPause();
-            FindObjectOfType<PauseMenu>().enabled = false;
-            Time.timeScale = 1;
+            //FindObjectOfType<PauseMenu>().enabled = false;
+            //Time.timeScale = 1;
             winText.text = ("T4AS GAGN2 EN " + stopwatch.getTime().ToString() + " SECONDES GG BG :P");
         }
     }
