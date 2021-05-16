@@ -1,0 +1,23 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+
+public class Button : MonoBehaviour
+{
+    public void LoadScene(int scene)
+    {
+        SceneManager.LoadScene(scene);
+    }
+    public void LoadLevel(int scene)
+    {
+        PlayerPrefs.SetFloat("level", scene);
+        SceneManager.LoadScene(scene + 2);
+    }
+
+    public void TryAgain()
+    {
+        SceneManager.LoadScene((int)PlayerPrefs.GetFloat("level"));
+    }
+}
