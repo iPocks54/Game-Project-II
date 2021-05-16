@@ -42,8 +42,8 @@ GameObject:
   - component: {fileID: 7096015696495108087}
   - component: {fileID: 7143378587666530125}
   - component: {fileID: 7146308036207475381}
-  - component: {fileID: 7146571626279036575}
   - component: {fileID: 2344811952998917314}
+  - component: {fileID: 4431733607565919902}
   m_Layer: 0
   m_Name: Simple Player
   m_TagString: Player
@@ -117,25 +117,6 @@ MonoBehaviour:
   groundCheck: {fileID: 7146303946055567313}
   jumpStrength: 7
   gravity: 20
---- !u!114 &7146571626279036575
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7114635618125455057}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 27b67ddb3d23b8340b125aede56d7e8c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  crouchYLocalPosition: 1
-  head: {fileID: 5272908400382377545}
-  defaultHeadYLocalPosition: 0
-  capsuleCollider: {fileID: 0}
-  defaultCapsuleColliderHeight: 0
-  groundCheck: {fileID: 7146303946055567313}
-  keys: 3201000031010000
 --- !u!65 &2344811952998917314
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -147,8 +128,23 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.95, y: 1.5681251, z: 0.95}
+  m_Size: {x: 0.85, y: 1.5681251, z: 0.85}
   m_Center: {x: 0, y: 0.8340625, z: 0}
+--- !u!114 &4431733607565919902
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7114635618125455057}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad06b730f70a7e14caf7b844fc564af6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  resetPos: {x: 0, y: 0, z: 0}
+  resetKey: 114
+  resetLimit: -50
 --- !u!1 &7115135580832882043
 GameObject:
   m_ObjectHideFlags: 0
@@ -304,7 +300,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.95, y: 0.1, z: 0.95}
+  m_Size: {x: 0.85, y: 0.1, z: 0.85}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &7484775557488183162
 GameObject:
@@ -333,7 +329,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7484775557488183162}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.637, z: 0}
+  m_LocalPosition: {x: 0, y: 1.31, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7112587876674831737}
