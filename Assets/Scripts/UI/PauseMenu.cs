@@ -10,7 +10,7 @@ public class PauseMenu : MonoBehaviour
     private GameObject pauseUI;
     [SerializeField]
     private KeyCode pauseKey = KeyCode.Escape;
-    private bool isPaused = false;
+    public static bool gameIsPaused = false;
 
     void Start()
     {
@@ -23,14 +23,14 @@ public class PauseMenu : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             TriggerPause();
-            pauseUI.SetActive(isPaused);
+            pauseUI.SetActive(gameIsPaused);
         }
     }
 
     public void TriggerPause()
     {
-        isPaused = !isPaused;
-        if (isPaused)
+        gameIsPaused = !gameIsPaused;
+        if (gameIsPaused)
         {
             Time.timeScale = 0;
             Cursor.lockState = CursorLockMode.None;
@@ -41,10 +41,10 @@ public class PauseMenu : MonoBehaviour
             Cursor.lockState = CursorLockMode.Locked;
         }
         //RAJOUTER LES SORTS APRES SUREMENT :)
-        player.GetComponent<FirstPersonMovement>().enabled = !isPaused;
-        player.GetComponent<Jump>().enabled = !isPaused;
-        player.GetComponent<PlayerReset>().enabled = !isPaused;
-        cam.GetComponent<FirstPersonLook>().enabled = !isPaused;
-        Cursor.visible = isPaused;
+        /*player.GetComponent<FirstPersonMovement>().enabled = !gameIsPaused;
+        player.GetComponent<Jump>().enabled = !gameIsPaused;
+        player.GetComponent<PlayerReset>().enabled = !gameIsPaused;
+        cam.GetComponent<FirstPersonLook>().enabled = !gameIsPaused;*/
+        Cursor.visible = gameIsPaused;
     }
 }

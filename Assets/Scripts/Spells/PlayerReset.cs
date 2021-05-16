@@ -15,7 +15,7 @@ public class PlayerReset : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player");
     }
 
-    void Update()
+    void FixedUpdate()
     {
         if (Input.GetKeyDown(resetKey) || player.transform.position.y < resetLimit)
         {

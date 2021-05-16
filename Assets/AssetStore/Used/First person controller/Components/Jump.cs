@@ -30,20 +30,23 @@ public class Jump : MonoBehaviour
         fallPos = gameObject.transform.position.y;
     }
 
-    void LateUpdate()
+    void Update()
     {
-        if (Input.GetButtonDown("Jump") && groundCheck.isGrounded)
+        if (!PauseMenu.gameIsPaused)
         {
-            rigidbody.AddForce(Vector3.up * 100 * jumpStrength);
+            if (Input.GetButtonDown("Jump") && groundCheck.isGrounded)
+            {
+                rigidbody.AddForce(Vector3.up * 100 * jumpStrength);
 
-            if (fpm.getIsRunning())
-                rigidbody.AddForce(cam.transform.forward * 200);
+                if (fpm.getIsRunning())
+                    rigidbody.AddForce(cam.transform.forward * 200);
 
-            Jumped?.Invoke();
+                Jumped?.Invoke();
+            }
+
+            checkIfFall();
+            rigidbody.velocity = new Vector3(rigidbody.velocity.x, rigidbody.velocity.y - (gravity * Time.deltaTime + fallSpeedModifier), rigidbody.velocity.z);
         }
-
-        checkIfFall();
-        rigidbody.velocity = new Vector3(rigidbody.velocity.x, rigidbody.velocity.y - (gravity * Time.deltaTime + fallSpeedModifier) ,rigidbody.velocity.z);
     }
     
     void checkIfFall()
