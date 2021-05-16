@@ -9,6 +9,7 @@ public class Button : MonoBehaviour
     public void LoadScene(int scene)
     {
         SceneManager.LoadScene(scene);
+        PlayerPrefs.SetFloat("level", scene);
     }
     public void LoadLevel(int scene)
     {
