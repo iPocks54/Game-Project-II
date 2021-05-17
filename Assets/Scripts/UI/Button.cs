@@ -10,6 +10,8 @@ public class Button : MonoBehaviour
     {
         SceneManager.LoadScene(scene);
         PlayerPrefs.SetFloat("level", scene);
+        if (PauseMenu.gameIsPaused)
+            FindObjectOfType<PauseMenu>().TriggerPause();
     }
     public void LoadLevel(int scene)
     {
@@ -20,5 +22,7 @@ public class Button : MonoBehaviour
     public void TryAgain()
     {
         SceneManager.LoadScene((int)PlayerPrefs.GetFloat("level"));
+        if (PauseMenu.gameIsPaused)
+            FindObjectOfType<PauseMenu>().TriggerPause();
     }
 }

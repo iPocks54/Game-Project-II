@@ -32,7 +32,7 @@ public class PauseMenu : MonoBehaviour
         gameIsPaused = !gameIsPaused;
         if (gameIsPaused)
         {
-            //Time.timeScale = 0;
+            Time.timeScale = 0;
             Cursor.lockState = CursorLockMode.None;
         }
         else
@@ -40,11 +40,6 @@ public class PauseMenu : MonoBehaviour
             Time.timeScale = 1;
             Cursor.lockState = CursorLockMode.Locked;
         }
-        //RAJOUTER LES SORTS APRES SUREMENT :)
-        /*player.GetComponent<FirstPersonMovement>().enabled = !gameIsPaused;
-        player.GetComponent<Jump>().enabled = !gameIsPaused;
-        player.GetComponent<PlayerReset>().enabled = !gameIsPaused;
-        cam.GetComponent<FirstPersonLook>().enabled = !gameIsPaused;*/
         Cursor.visible = gameIsPaused;
     }
 }
