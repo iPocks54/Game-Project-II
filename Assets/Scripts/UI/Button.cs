@@ -6,6 +6,11 @@ using UnityEngine.UI;
 
 public class Button : MonoBehaviour
 {
+    public void ExitScene()
+    {
+        Application.Quit();
+    }
+
     public void LoadScene(int scene)
     {
         SceneManager.LoadScene(scene);

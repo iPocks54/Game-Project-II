@@ -17,7 +17,8 @@ public class SetCheckpoint : MonoBehaviour
     private void Start()
     {
         checkText = GameObject.FindGameObjectWithTag("CheckpointText").GetComponent<TMP_Text>();
-        checkText.enabled = false;
+        if (checkText)
+            checkText.enabled = false;
     }
 
     private void OnTriggerEnter(Collider other)

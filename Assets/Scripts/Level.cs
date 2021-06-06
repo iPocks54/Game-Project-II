@@ -31,7 +31,9 @@ public class Level : MonoBehaviour
             winText.text = (stopwatch.getTime().ToString() + " SECONDES GG");
             if (playfabM)
             {
-                playfabM.SendLeaderboard(Mathf.RoundToInt(stopwatch.getTime()));
+               // print(("oui la le congo la ") + Mathf.RoundToInt(stopwatch.getTime() * 100));
+                //playfabM.SendLeaderboard(Mathf.RoundToInt(stopwatch.getTime()));
+                playfabM.SendLeaderboard(-Mathf.RoundToInt(stopwatch.getTime() * 1000));
                 playfabM.GetleaderBoard();
             }
         }

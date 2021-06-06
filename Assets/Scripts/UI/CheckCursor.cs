@@ -13,7 +13,6 @@ public class CheckCursor : MonoBehaviour
     // Update is called once per frames
     void Update()
     {
-        print("cursor la : " + Cursor.visible);
         if (!Cursor.visible || Cursor.lockState == CursorLockMode.Locked)
         {
             Cursor.lockState = CursorLockMode.None;
