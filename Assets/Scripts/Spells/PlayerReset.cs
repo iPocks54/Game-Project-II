@@ -9,17 +9,19 @@ public class PlayerReset : MonoBehaviour
     public Vector3 resetPos;
     public KeyCode resetKey = KeyCode.R;
     public float resetLimit = -50;
-    
+
+    Transform resetTransform;
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
+        resetTransform = player.transform;
     }
 
     void FixedUpdate()
     {
         if (Input.GetKeyDown(resetKey) || player.transform.position.y < resetLimit)
         {
-            resetPlayer();
+            resetLevel();
         }
     }
 
@@ -31,7 +33,7 @@ public class PlayerReset : MonoBehaviour
 
     public void resetPlayer()
     {
-        player.transform.SetPositionAndRotation(resetPos, player.transform.localRotation);
+        player.transform.SetPositionAndRotation(resetPos, resetTransform.rotation);
     }
 
     public bool setResetPos(Vector3 newResetPos)

@@ -125,7 +125,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59c2778dd6d37f84e85a9a173350f52c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  force: 750
+  force: 1000
   angle: 0.4
   shockwave: {fileID: 5617394799581397252, guid: d76d45359ba1597448a7a9ba21030acc, type: 3}
   power: 15
