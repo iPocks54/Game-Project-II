@@ -19,9 +19,13 @@ public class PlayerReset : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (Input.GetKeyDown(resetKey) || player.transform.position.y < resetLimit)
+        if (Input.GetKeyDown(resetKey))
         {
             resetLevel();
+        }
+        if ( player.transform.position.y < resetLimit)
+        {
+            resetPlayer();
         }
     }
 
