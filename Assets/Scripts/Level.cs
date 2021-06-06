@@ -9,6 +9,7 @@ public class Level : MonoBehaviour
     private Stopwatch stopwatch;
     private TMP_Text winText;
     private GameObject winUI;
+    public PlayfabManager playfabM;
 
     private void Start()
     {
@@ -28,6 +29,11 @@ public class Level : MonoBehaviour
             //FindObjectOfType<PauseMenu>().enabled = false;
             //Time.timeScale = 1;
             winText.text = (stopwatch.getTime().ToString() + " SECONDES GG");
+            if (playfabM)
+            {
+                playfabM.SendLeaderboard(Mathf.RoundToInt(stopwatch.getTime()));
+                playfabM.GetleaderBoard();
+            }
         }
     }
 }
