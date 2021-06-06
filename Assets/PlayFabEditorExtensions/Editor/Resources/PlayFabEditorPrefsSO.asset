@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d0199c11aa6f514784c5c69cd8378d8, type: 3}
   m_Name: PlayFabEditorPrefsSO
   m_EditorClassIdentifier: 
-  DevAccountEmail: carl.lebrun@hotmail.fr
-  DevAccountToken: ws97a6rg3spexg9zbqo919k9rdtyibe5bgxmb3pecgxuobgr8988usgipqqfgq9773b97niu37ydkaqbijooddmf3yt6omtnrwcj9gpohogojqaym1hifw9mazx4izjje4t3u6b9taghaurhihcekggjj9ty7o5fzbmhp58dhmm5bkryrzpa7o5aicz8noywukpb55iw
-  SelectedStudio: RadMac Studio
-  SdkPath: Assets/PlayFabSDK
+  DevAccountEmail: 
+  DevAccountToken: 
+  SelectedStudio: 
+  SdkPath: 
   EdExPath: 
   LocalCloudScriptPath: 
   PanelIsShown: 0

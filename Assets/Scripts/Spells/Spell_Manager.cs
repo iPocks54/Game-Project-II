@@ -7,24 +7,25 @@ public class Spell_Manager : MonoBehaviour
 {
     public Spell[] spells;
     public TMP_Text[] CDs;
-    CooldownTimer[] timers = new CooldownTimer[4];
+    CooldownTimer[] timers;
     void Start()
     {
-        timers[0] = new CooldownTimer(spells[0].cooldown);
-        timers[1] = new CooldownTimer(spells[1].cooldown);
-        timers[2] = new CooldownTimer(spells[2].cooldown);
-        timers[3] = new CooldownTimer(spells[3].cooldown);
+        timers = new CooldownTimer[spells.Length];
 
-        timers[0].TimeRemaining = 0;
-        timers[1].TimeRemaining = 0;
-        timers[2].TimeRemaining = 0;
-        timers[3].TimeRemaining = 0;
+        for (int i = 0; i < timers.Length; i++)
+        {
+            timers[i] = new CooldownTimer(spells[i].cooldown);
+            timers[i].TimeRemaining = 0;
+        }
     }
 
     void Update()
     {
-        Inputs();
-        UpdateCDs();
+        if (spells.Length != 0 && CDs.Length != 0)
+        {
+            Inputs();
+            UpdateCDs();
+        }
     }
 
     void Inputs()
@@ -44,10 +45,9 @@ public class Spell_Manager : MonoBehaviour
         foreach (CooldownTimer timer in timers)
             timer.Update(Time.deltaTime);
 
-        CDs[0].text = timers[0].TimeRemaining.ToString("F1");
-        CDs[1].text = timers[1].TimeRemaining.ToString("F1");
-        CDs[2].text = timers[2].TimeRemaining.ToString("F1");
-        CDs[3].text = timers[3].TimeRemaining.ToString("F1");
+        for (int i = 0; i < timers.Length; i++)
+            CDs[i].text = timers[i].TimeRemaining.ToString("F1");
+        
 
     }
 
