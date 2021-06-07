@@ -7,7 +7,17 @@ public class Global : MonoBehaviour
 {
     public InputField nameInput;
     public GameObject window;
-    public static string Username = "Bob";
+    public GameObject menu;
+    public static string Username;
+
+    private void Start()
+    {
+        if (Username != null)
+            window.SetActive(false);
+        else
+            menu.SetActive(false);
+
+    }
 
     public void setUsername()
     {

@@ -143,8 +143,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   resetPos: {x: 0, y: 0, z: 0}
-  resetKey: 114
-  resetLimit: -50
+  resetKey: 296
+  resetLimit: -30
 --- !u!1 &7115135580832882043
 GameObject:
   m_ObjectHideFlags: 0

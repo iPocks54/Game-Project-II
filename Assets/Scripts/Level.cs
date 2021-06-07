@@ -29,10 +29,10 @@ public class Level : MonoBehaviour
             //FindObjectOfType<PauseMenu>().enabled = false;
             //Time.timeScale = 1;
             winText.text = (stopwatch.getTime().ToString() + " SECONDES GG");
+            //print("playfab M ? : |" + playfabM + "|");
             if (playfabM)
             {
-               // print(("oui la le congo la ") + Mathf.RoundToInt(stopwatch.getTime() * 100));
-                //playfabM.SendLeaderboard(Mathf.RoundToInt(stopwatch.getTime()));
+                print("just befor the drame : " + -Mathf.RoundToInt(stopwatch.getTime() * 1000));
                 playfabM.SendLeaderboard(-Mathf.RoundToInt(stopwatch.getTime() * 1000));
                 playfabM.GetleaderBoard();
             }

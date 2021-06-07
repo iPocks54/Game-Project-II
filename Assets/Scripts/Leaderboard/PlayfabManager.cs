@@ -22,7 +22,6 @@ public class PlayfabManager : MonoBehaviour
 
     public void Start()
     {
-        print("juste je test la ");
         Login(Global.Username);
     }
 
@@ -74,7 +73,8 @@ public class PlayfabManager : MonoBehaviour
     void OnDisplayNameUpdate(UpdateUserTitleDisplayNameResult result)
     {
         Debug.Log("Updated display name!");
-        leaderboardWindow.SetActive(true);
+        if (leaderboardWindow)
+            leaderboardWindow.SetActive(true);
     }
 
     void OnSuccess(LoginResult result)
@@ -90,7 +90,6 @@ public class PlayfabManager : MonoBehaviour
 
     public void SendLeaderboard(int score)
     {
-        print("sendeuh");
         var request = new UpdatePlayerStatisticsRequest
         {
             Statistics = new List<StatisticUpdate>
@@ -112,7 +111,6 @@ public class PlayfabManager : MonoBehaviour
 
     public void GetleaderBoard()
     {
-        print("je guette la ");
         var request = new GetLeaderboardRequest
         {
             StatisticName = leaderboardName,
@@ -124,7 +122,6 @@ public class PlayfabManager : MonoBehaviour
 
     void OnLeaderboardGet(GetLeaderboardResult result)
     {
-        print("je me fais gueetz la xD");
         foreach (Transform item in rowsParent)
             Destroy(item.gameObject);
 
@@ -134,7 +131,9 @@ public class PlayfabManager : MonoBehaviour
             Text[] texts = newGo.GetComponentsInChildren<Text>();
             texts[0].text = item.Position.ToString();
             texts[1].text = item.DisplayName;
-            texts[2].text = item.StatValue.ToString();
+            int rawvalue = (item.StatValue * -1 / 1000);
+            texts[2].text = (rawvalue + "." + (item.StatValue * -1 - rawvalue * 1000)).ToString();
+            //texts[2].text = (item.StatValue * -1 /1000).ToString();
 
 
             //Debug.Log(item.Position + " " + item.PlayFabId + " " + item.StatValue);
