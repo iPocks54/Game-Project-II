@@ -218,6 +218,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3342801309303151640, guid: 5003710bf7a7e7f478cd7052c4faab53, type: 3}
+      propertyPath: playfabM
+      value: 
+      objectReference: {fileID: 156114750}
     - target: {fileID: 3342801309303151647, guid: 5003710bf7a7e7f478cd7052c4faab53, type: 3}
       propertyPath: m_Name
       value: WinLine
@@ -247,6 +251,10 @@ PrefabInstance:
       propertyPath: spells.Array.data[0]
       value: 
       objectReference: {fileID: 1031139761935032711, guid: 3a12e8493efd66643b19bc1b1c8f0777, type: 3}
+    - target: {fileID: 8548901258126258073, guid: 9e0d2873617d3e544938255363a615d4, type: 3}
+      propertyPath: leaderboardName
+      value: Leaderboard lvl 7
+      objectReference: {fileID: 0}
     - target: {fileID: 9067567360434254331, guid: 9e0d2873617d3e544938255363a615d4, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -346,6 +354,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &156114750 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8548901258126258073, guid: 9e0d2873617d3e544938255363a615d4, type: 3}
+  m_PrefabInstance: {fileID: 156114748}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec1d9917e91a11849ba46cefaa42dbac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &190716566
