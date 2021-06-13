@@ -235,6 +235,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2046414238212748692, guid: 9e0d2873617d3e544938255363a615d4, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 4805087717624018896, guid: 9e0d2873617d3e544938255363a615d4, type: 3}
       propertyPath: spells.Array.size
       value: 1
