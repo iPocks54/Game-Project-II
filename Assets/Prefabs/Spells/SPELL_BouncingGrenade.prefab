@@ -44,4 +44,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cooldown: 4
-  grenade: {fileID: 2060781450780785060, guid: ca3866d58d515ad4398e376ffe7a6b35, type: 3}
+  grenade: {fileID: 1811856859413184, guid: 72fd073cc2702eb48bfdb0cef4e10ae1, type: 3}

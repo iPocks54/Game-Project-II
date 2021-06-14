@@ -27,11 +27,11 @@ public class Bouncing_Grenade : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         Detonate();
-        shockwave.transform.position = transform.position;
+       /* shockwave.transform.position = transform.position;
         GameObject clone = shockwave;
         clone = Instantiate(clone) as GameObject;
         Destroy(clone, 0.5f);
-        Destroy(gameObject);
+        Destroy(gameObject); */
     }
 
     void Detonate()
