@@ -13,7 +13,10 @@ public class Global : MonoBehaviour
     private void Start()
     {
         if (Username != null)
+        {
             window.SetActive(false);
+            menu.SetActive(true);
+        }
         else
             menu.SetActive(false);
 
@@ -23,6 +26,9 @@ public class Global : MonoBehaviour
     {
         Username = nameInput.text;
         if (Username.Length > 3 && Username.Length < 20)
+        {
             window.SetActive(false);
+            menu.SetActive(true);
+        }
     }
 }

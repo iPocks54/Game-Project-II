@@ -26,13 +26,9 @@ public class Level : MonoBehaviour
             stopwatch.setPause(true);
             winUI.SetActive(true);
             FindObjectOfType<PauseMenu>().TriggerPause();
-            //FindObjectOfType<PauseMenu>().enabled = false;
-            //Time.timeScale = 1;
             winText.text = (stopwatch.getTime().ToString() + " SECONDES GG");
-            //print("playfab M ? : |" + playfabM + "|");
             if (playfabM)
             {
-                print("just befor the drame : " + -Mathf.RoundToInt(stopwatch.getTime() * 1000));
                 playfabM.SendLeaderboard(-Mathf.RoundToInt(stopwatch.getTime() * 1000));
                 playfabM.GetleaderBoard();
             }

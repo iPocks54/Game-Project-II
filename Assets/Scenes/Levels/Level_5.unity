@@ -10310,7 +10310,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2046414238212748692, guid: 9e0d2873617d3e544938255363a615d4, type: 3}
       propertyPath: m_Interactable
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2046414238212748692, guid: 9e0d2873617d3e544938255363a615d4, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 2682906987782744385, guid: 9e0d2873617d3e544938255363a615d4, type: 3}
       propertyPath: m_IsActive
