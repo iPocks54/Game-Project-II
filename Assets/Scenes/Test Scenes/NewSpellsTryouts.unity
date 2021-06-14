@@ -2616,8 +2616,8 @@ GameObject:
   - component: {fileID: 821382332}
   - component: {fileID: 821382331}
   - component: {fileID: 821382330}
-  m_Layer: 6
-  m_Name: Cube (3)
+  m_Layer: 7
+  m_Name: Grappling anchor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2814,7 +2814,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7904967111104081008, guid: 488e5c2a6d614cf48b0058fb8fa0e89d, type: 3}
   m_PrefabInstance: {fileID: 1084835119285427161}
   m_PrefabAsset: {fileID: 0}
---- !u!120 &891305357
+--- !u!120 &891305358
 LineRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
