@@ -110,6 +110,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   displayTime: 2
+  animation: {fileID: 100010, guid: 460f77d8b0db10d409e5b99613751ce7, type: 3}
 --- !u!1001 &1147546194539682961
 PrefabInstance:
   m_ObjectHideFlags: 0

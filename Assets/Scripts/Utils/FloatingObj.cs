@@ -25,9 +25,9 @@ public class FloatingObj : MonoBehaviour
             ZdegreesPerSecond = Random.Range(-0, 45);
 
         if (amplitude == -1)
-            amplitude = Random.Range(-0, 3);
+            amplitude = Random.Range(-0f, 3f);
         if (frequency == -1)
-            frequency = Random.Range(-0, 3);
+            frequency = Random.Range(-0f, 0.2f);
     }
 
     void Update()

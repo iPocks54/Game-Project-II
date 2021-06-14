@@ -13,6 +13,9 @@ public class SetCheckpoint : MonoBehaviour
     [SerializeField]
     private float displayTime = 2;
     private float time = 0;
+    private bool asAnimate = false;
+
+    public GameObject animation;
 
     private void Start()
     {
@@ -28,6 +31,15 @@ public class SetCheckpoint : MonoBehaviour
             checkText.enabled = true;
             isTrigger = true;
             isDisplay = true;
+        }
+
+        if (!asAnimate)
+        {
+            animation.transform.position = GameObject.FindGameObjectWithTag("Player").transform.position;
+            GameObject clone = animation;
+            clone = Instantiate(clone) as GameObject;
+            Destroy(clone, 2f);
+            asAnimate = true;
         }
 
     }
