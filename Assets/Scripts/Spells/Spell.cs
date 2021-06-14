@@ -5,6 +5,7 @@ using UnityEngine;
 public class Spell : MonoBehaviour
 {
     public float cooldown = 2f;
+    public string spellName = "noname";
 
     void Start()
     {

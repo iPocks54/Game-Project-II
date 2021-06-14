@@ -7,6 +7,8 @@ public class Spell_Manager : MonoBehaviour
 {
     public Spell[] spells;
     public TMP_Text[] CDs;
+    public TMP_Text[] names;
+
     CooldownTimer[] timers;
     void Start()
     {
@@ -16,6 +18,7 @@ public class Spell_Manager : MonoBehaviour
         {
             timers[i] = new CooldownTimer(spells[i].cooldown);
             timers[i].TimeRemaining = 0;
+            names[i].text = spells[i].spellName;
         }
     }
 

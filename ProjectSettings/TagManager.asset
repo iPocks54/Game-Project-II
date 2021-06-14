@@ -10,6 +10,7 @@ TagManager:
   - Stopwatch
   - WinText
   - WinUI
+  - Enemy
   layers:
   - Default
   - TransparentFX
@@ -20,8 +21,8 @@ TagManager:
   - 
   - 
   - Ground
-  - 
-  - 
+  - Player
+  - Grenade
   - 
   - 
   - 

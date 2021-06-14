@@ -44,4 +44,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cooldown: 5
+  spellName: Platform ball
   grenade: {fileID: 8965743564794677969, guid: b8cc94abb3aee9240a4475dc7742bc80, type: 3}
