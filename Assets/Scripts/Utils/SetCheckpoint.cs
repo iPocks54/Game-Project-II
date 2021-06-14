@@ -5,15 +5,12 @@ using TMPro;
 
 public class SetCheckpoint : MonoBehaviour
 {
-    //[SerializeField]
-    //private Vector3 checkpointPos;
     private TMP_Text checkText;
     private bool isTrigger = false;
     private bool isDisplay = false;
     [SerializeField]
     private float displayTime = 2;
     private float time = 0;
-    private bool asAnimate = false;
 
     public GameObject animation;
 
@@ -26,20 +23,15 @@ public class SetCheckpoint : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (FindObjectOfType<PlayerReset>().setResetPos(transform.position))
+        if (other.CompareTag("Player") && FindObjectOfType<PlayerReset>().setResetPos(transform.position))
         {
             checkText.enabled = true;
             isTrigger = true;
             isDisplay = true;
-        }
-
-        if (!asAnimate)
-        {
             animation.transform.position = GameObject.FindGameObjectWithTag("Player").transform.position;
             GameObject clone = animation;
             clone = Instantiate(clone) as GameObject;
             Destroy(clone, 2f);
-            asAnimate = true;
         }
 
     }

@@ -6,19 +6,11 @@ public class SimpleBullet : MonoBehaviour
 {
     [SerializeField]
     private float speed = 10f;
+    private Rigidbody m_rigidbody;
+
     private void Start()
     {
-    }
-    void Update()
-    {
-        transform.Translate(transform.right * Time.deltaTime * speed);
-
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.CompareTag("Player"))
-            FindObjectOfType<PlayerReset>().resetPlayer();
-        Destroy(gameObject);
+        m_rigidbody = GetComponent<Rigidbody>();
+        m_rigidbody.AddForce(transform.right * speed);
     }
 }

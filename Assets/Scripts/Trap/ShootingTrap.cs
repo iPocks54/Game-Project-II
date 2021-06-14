@@ -10,8 +10,12 @@ public class ShootingTrap : MonoBehaviour
     private GameObject bullet;
     [SerializeField]
     private float shootingInterval = 1f;
+    [SerializeField]
+    private float lifeTime = 3;
     private float time = 0;
     private GameObject currentBullet;
+    [SerializeField]
+    private AudioSource throwSound;
     // Start is called before the first frame update
     void Start()
     {
@@ -31,7 +35,8 @@ public class ShootingTrap : MonoBehaviour
 
     private void throwBullet()
     {
+        throwSound.Play();
         currentBullet = Instantiate(bullet, throwing_position.transform.position, Quaternion.identity);
-        Destroy(currentBullet, 7);
+        Destroy(currentBullet, lifeTime);
     }
 }
