@@ -25,7 +25,7 @@ public class FirstPersonMovement : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (Input.GetKey(runBind))
+        if (Input.GetKey(GameManager.GM.run))
             run();
         else if (!Input.GetKey(runBind))
             walk();
