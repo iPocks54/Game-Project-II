@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 114209094770351786}
   - component: {fileID: 114070177902954670}
   - component: {fileID: -8656221230903610383}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Bouncing_Grenade
   m_TagString: Untagged
   m_Icon: {fileID: 0}

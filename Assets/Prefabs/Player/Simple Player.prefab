@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7114014503410907058}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Throwing_position
   m_TagString: CastPosition
   m_Icon: {fileID: 0}
@@ -44,7 +44,7 @@ GameObject:
   - component: {fileID: 7146308036207475381}
   - component: {fileID: 2344811952998917314}
   - component: {fileID: 4431733607565919902}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Simple Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -156,7 +156,7 @@ GameObject:
   - component: {fileID: 7112823120956799539}
   - component: {fileID: 7120011566632480649}
   - component: {fileID: 7126959137983214363}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Capsule mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -238,7 +238,7 @@ GameObject:
   - component: {fileID: 7146303946055567313}
   - component: {fileID: 1115328158652296804}
   - component: {fileID: 1115328158652296806}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Ground check
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -314,7 +314,7 @@ GameObject:
   - component: {fileID: 6235972305192823810}
   - component: {fileID: 183922533268723588}
   - component: {fileID: 7222451425470957071}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
