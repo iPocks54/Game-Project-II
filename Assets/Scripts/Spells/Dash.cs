@@ -8,6 +8,8 @@ public class Dash : Spell
     private GameObject player;
     Rigidbody rig;
 
+    public GameObject sound;
+
     void Awake()
     {
         player = GameObject.FindGameObjectWithTag("Player");
@@ -23,5 +25,9 @@ public class Dash : Spell
         if (!player)
             Initialize();
         player.GetComponent<Rigidbody>().AddForce(player.transform.forward * dashSpeed, ForceMode.Force);
+        GameObject clone = sound;
+        clone = Instantiate(clone);
+        clone.GetComponent<AudioSource>().Play();
+        Destroy(clone, 2);
     }
 }

@@ -189,3 +189,4 @@ MonoBehaviour:
   power: 15
   radius: 3
   upForce: 1
+  sound: {fileID: 6086564249070629893, guid: 932cc3b4ed0ab374c895f0a0c3c1589c, type: 3}

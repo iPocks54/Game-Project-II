@@ -46,3 +46,4 @@ MonoBehaviour:
   cooldown: 2
   spellName: Dash
   dashSpeed: 1500
+  sound: {fileID: 7691911349614459535, guid: befa451f171f4a64bbfda911017d18c9, type: 3}

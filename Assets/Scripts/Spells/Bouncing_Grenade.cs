@@ -11,7 +11,7 @@ public class Bouncing_Grenade : MonoBehaviour
     public float power = 10.0f;
     public float radius = 5.0f;
     public float upForce = 1.0f;
-
+    public GameObject sound;
     void Start()
     {
         cam = GameObject.FindGameObjectWithTag("MainCamera"); ;
@@ -47,5 +47,10 @@ public class Bouncing_Grenade : MonoBehaviour
                 rb.AddExplosionForce(power, explosionPosition, radius, upForce, ForceMode.Impulse);
             }
         }
+
+        GameObject clone = sound;
+        clone = Instantiate(clone);
+        clone.GetComponent<AudioSource>().Play();
+        Destroy(clone, 2);
     }
 }
