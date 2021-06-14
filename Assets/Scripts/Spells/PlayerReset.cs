@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class PlayerReset : MonoBehaviour
 {
     private GameObject player;
+    private Spell_Grappling grappling;
     public Vector3 resetPos;
     public KeyCode resetKey = KeyCode.R;
     public float resetLimit = -50;
@@ -13,6 +14,7 @@ public class PlayerReset : MonoBehaviour
     Transform resetTransform;
     void Start()
     {
+        Cursor.lockState = CursorLockMode.Locked;
         player = GameObject.FindGameObjectWithTag("Player");
         resetTransform = player.transform;
     }
@@ -37,6 +39,8 @@ public class PlayerReset : MonoBehaviour
 
     public void resetPlayer()
     {
+        grappling = player.GetComponent<Spell_Grappling>();
+        grappling.resetGrapplePoint();
         player.transform.SetPositionAndRotation(resetPos, resetTransform.rotation);
     }
 
